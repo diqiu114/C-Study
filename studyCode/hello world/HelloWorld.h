@@ -8,7 +8,26 @@
 
 class HelloWorld
 {
-    void HelloWorld();
+public:
+    HelloWorld();
+    ~HelloWorld();
+
+    int i;
+    struct X; // 前向声明
+    struct Y {
+        void
+    }
+
+    void set(int i);
+    void f();
+    void g(HelloWorld *p); // 访问别人的对象私有内容
+private:
+    struct TestStruct {
+        int i;
+        int j;
+    };
+
+    void TestPrint();
 };
 
 #endif //HELLO_WORLD_HELLOWORLD_H
